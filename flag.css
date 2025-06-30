@@ -1,0 +1,37 @@
+.redcolor {
+    position: relative;
+    height: 800px;
+    width: 500px;
+    background-color: #DA2032;
+    color: #DA2032;
+    text-align: start;
+    justify-content: center;
+    align-items: center;
+}
+
+.redcolor img {
+    position: absolute;
+    right: 100px;
+    bottom: 140px;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 600px;
+}
+
+.bluecolor {
+    width: 500px;
+    height: 800px;
+    background-color:  #0066B3;
+    color: #0066B3;
+}
+
+.flex {
+    display: flex;
+}
+
+body {
+    position: absolute;
+    left: 375px;
+    top: 170px;
+}
