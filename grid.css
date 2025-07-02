@@ -1,0 +1,26 @@
+.myGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+.myGrid h1 {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.grid1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border: 1px solid blue;
+    background-color: cyan;
+}
+
+.grid {
+    border: 1px solid blue;
+    background-color: cyan;
+    padding: 100px;
+}
