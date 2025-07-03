@@ -1,0 +1,138 @@
+.tubikBlog {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tubikBlog .tubikBlogImg img {
+    width: 50px;
+    height: 50px;
+}
+
+.tubikBlogImg {
+    display: flex;
+}
+
+.searchBar {
+    width: 30px;
+    height: 30px;
+}
+
+.searchBarPrime {
+    display: flex;
+    gap: 50px;
+}
+
+.subscribe {
+    position: relative;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+
+.myMenu {
+    justify-content: center;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.nava {
+    margin-right: 30px;
+}
+
+.latestMenu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.articleMain {
+    padding-right: 70px;
+    padding-left: 70px;
+}
+
+.myGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 300px);
+    grid-template-rows: repeat(2, 300px);
+    width: 100px;
+    height: 100px;
+}
+
+.myGrid1 {
+    border-radius: 16px;
+    position: relative;
+    color: #F8F8FA;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("My html/images/tubikBlogImage.jpeg");
+    background-size: cover;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.myGrid1 .absolutely {
+    position: relative;
+    margin-left: 50px;
+    top: 50px;
+}
+
+.myGrid1 .relative {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 25px;
+    left: 50px;
+}
+
+.myGrid1 .relative2 {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 100px;
+    margin-left: 50px;
+}
+
+.peopleWithBirdsImg .brandingImg {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.peopleWithBirdsImg {
+    margin-left: 50px;
+}
+
+.yellowGraphImg .yellowGraph {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.yellowGraphImg {
+    margin-left: 50px;
+}
+
+.peopleDrawingImg .peopleDrawing {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.peopleDrawingImg {
+    margin-left: 50px;
+}
+
+.manyPhonesImg .manyPhones {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+.manyPhonesImg {
+    margin-left: 50px;
+}
