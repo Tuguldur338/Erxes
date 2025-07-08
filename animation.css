@@ -1,0 +1,85 @@
+.moveRight {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: moveLeft 2s ease-in-out infinite;
+}
+
+@keyframes moveLeft {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 300px;
+    }
+}
+
+.opacity p {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    color: white;
+    position: relative;
+    animation: fadeIn 1.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.pulseButton {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    color: white;
+    animation: pulse 1s alternate infinite;
+}
+
+@keyframes pulse {
+    0% {transform:scale(1)}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+.backgroundImg {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    animation: cycle 3s ease infinite;
+}
+
+@keyframes cycle {
+    0% { background-color: blue; }
+    33% { background-color: green; }
+    66% { background-color: yellow ;}
+    100% { background-color: blue; }
+}
+
+.slide h1 {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    animation: slidedown ;
+}
+
+@keyframes slidedown {
+    from {
+        opacity: 0;
+        transform:  translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);   
+    }
+}
