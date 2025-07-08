@@ -1,0 +1,63 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    transition: transform 0.7s ease-in;
+}
+
+.box:hover {
+    transform: translate(50px, 20px);
+}
+
+.rotate {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    transition: transform 0.8s ease-in;
+}
+
+.rotate:hover {
+    transform: rotate(360deg);
+}
+
+.scale {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    transition: transform 0.7s ease-in;
+}
+
+.scale:hover { 
+    transform: scale(1.2);
+}
+
+.skew {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    transition: transform 0.7s ease-in;
+}
+
+.skew:hover {
+    transform: skew(20deg)
+}
+
+.combo {
+    width: 100px;
+    height: 100px;
+    color: white;
+    transition: transform 0.5s ease-in; 
+}
+
+.combo img {
+    width: 100px;
+    height: 100px;
+}
+
+.combo:hover {
+    transform: rotate(10deg) scale(1.1) translateY(-10px);  
+}
