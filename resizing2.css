@@ -1,0 +1,38 @@
+.main1 {
+    font-size: 20px;
+    margin-right: 300px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.box1 {
+    background-color: red;  
+}
+
+.box2 {
+    background-color: blue;
+}
+
+@media only screen and (max-width: 768px ) {
+    .main1 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .box1 {
+        order: 1;
+        width: 320px;
+        background-color: red;
+    }
+
+    .box2 {
+        background-color: blue;
+        width: 320px;
+    }
+}
+
+@media only screen and(max-width: 600px ) {
+    .box1 {
+        visibility: hidden;
+    }
+}
