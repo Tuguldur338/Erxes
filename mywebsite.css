@@ -1,0 +1,557 @@
+body {
+    margin: 0;
+    background-color: white;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("mongolia.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    animation: fadeOutBg 1s ease-in forwards;
+    animation-delay: 2s;
+}
+
+
+
+@keyframes fadeOutBg {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.header1 {
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 3s;
+    display: flex;
+}
+
+img {
+    opacity: 0;
+    animation: fadeInImage 1.5s ease-in forwards;
+    animation-delay: 3s;
+}
+
+.flagImg {
+    width: 50px;
+    height: auto;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 2000px) {
+    body {
+        font-size: 14px;
+    }
+
+    .capitalSection {
+        font-size: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .capitalTitle {
+        font-size: 2em;
+        color: #333;
+    }
+
+    .capitalName {
+        font-size: 1.5em;
+        color: #555;
+    }
+
+
+    details:hover {
+        border: 0;
+    }
+
+    .header1 {
+        position: sticky;
+        font-size: 20px;
+    }
+
+    .foodSection {
+        text-decoration: none;
+        color: black;
+    }
+
+    .box {
+        font-size: 20px;
+        display: flex;
+        padding-top: 300px;
+        color: white;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .flagImg {
+        width: 300px;
+        height: 300px;
+    }
+
+    .aboutSection {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+.header1 nav {
+    position: sticky;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1999px) {
+    .box {
+        font-size: 18px;
+        display: flex;
+        padding-top: 175px;
+        color: white;
+        text-align: center;
+        justify-content: center;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .header1 {
+        font-size: 16px;
+    }
+
+    .a1 {
+        margin-right: 25px;
+    }
+
+    .a2 {
+        margin-right: 25px;
+    }
+
+    .a3 {
+        margin-right: 25px;
+    }
+
+    .a4 {
+        margin-right: 25px;
+    }
+
+    .a5 {
+        margin-right: 25px;
+    }
+
+    .header1 {
+        font-size: 16px;
+        gap: 20px;
+    }
+
+    .flagImg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .aboutSection {
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .grid1 muisImg {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 599px) {
+    body {
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    h6 {
+        font-size: 14px;
+    }
+
+    p, a, nav, header, footer, button {
+        font-size: 14px;
+    }
+
+    input, select, textarea {
+        font-size: 14px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .grid1 muisImg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .box {
+        font-size: 16px;
+        display: flex;
+        padding-top: 30px;
+        color: white;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .flagImg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .aboutSection {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .header1 {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    table {
+        width: 100%;
+        font-size: 12px;
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+.grid {
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.grid1 {
+    margin-right: 50px;
+    opacity: 0;
+    animation: delayWord 1s ease-in forwards;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes delayWord {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grid2 {
+    opacity: 0;
+    animation: delayWords 1s ease-in forwards;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes delayWords {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grid3 {
+    margin-right: 50px;
+    opacity: 0;
+    animation: grid3 1s ease-in forwards;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes grid3 {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grid4 {
+    opacity: 0;
+    animation: grid4 1s ease-in forwards;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes grid4 {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grid5 {
+    margin-right: 50px;
+    opacity: 0;
+    animation: grid5 1s ease-in forwards;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes grid5 {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grid6 {
+    opacity: 0;
+    animation: grid6 1s ease-in forwards;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes grid6 {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grid7 {
+    opacity: 0;
+    animation: grid7 1s ease-in forwards;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes grid7 {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.box1 {
+    animation-iteration-count: 1;
+    margin-right: 50px;
+    animation: opacity1 1s ease-in;
+}
+
+@keyframes opacity1 {
+    from {
+        opacity: 0;
+    }
+
+    to {    
+        opacity: 1;
+    }
+}
+
+.box2 {
+    animation-iteration-count: 1;
+    margin-right: 50px;
+    animation: opacity2 1.1s ease-in;
+}
+
+@keyframes opacity2 {
+    from {
+        opacity: 0;
+    }
+
+    to {    
+        opacity: 1;
+    }
+}
+
+.box3 {
+    animation-iteration-count: 1;
+    margin-right: 50px;
+    animation: opacity3 1.3s ease-in;
+}
+
+@keyframes opacity3 {
+    from {
+        opacity: 0;
+    }
+
+    to {    
+        opacity: 1;
+    }
+}
+
+.box4 {
+    animation-iteration-count: 1;
+    margin-right: 50px;
+    animation: opacity4 1.4s ease-in;
+}
+
+@keyframes opacity4 {
+    from {
+        opacity: 0;
+    }
+
+    to {    
+        opacity: 1;
+    }
+}
+
+.box5 {
+    animation-iteration-count: 1;
+    margin-right: 50px;
+    animation: opacity5 1.5s ease-in;
+}
+
+@keyframes opacity5 {
+    from {
+        opacity: 0;
+    }
+
+    to {    
+        opacity: 1;
+    }
+}
+
+.box6 {
+    animation-iteration-count: 1;
+    margin-right: 50px;
+    animation: opacity6 1.6s ease-in;
+}
+
+@keyframes opacity6 {
+    from {
+        opacity: 0;
+    }
+
+    to {    
+        opacity: 1;
+    }
+}
+
+.box7 {
+    animation-iteration-count: 1;
+    margin-right: 50px;
+    animation: opacity7 1.7s ease-in;
+}
+
+@keyframes opacity7 {
+    from {
+        opacity: 0;
+    }
+
+    to {    
+        opacity: 1;
+    }
+}
+
+.box8 {
+    animation-iteration-count: 1;
+    margin-right: 50px;
+    animation: opacity8 1.8s ease-in;
+}
+
+@keyframes opacity8 {
+    from {
+        opacity: 0;
+    }
+
+    to {    
+        opacity: 1;
+    }
+}
