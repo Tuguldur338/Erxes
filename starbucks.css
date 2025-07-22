@@ -1,0 +1,223 @@
+body {
+    box-sizing: border-box;
+}
+
+.kofi {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.star {
+    gap: 50px;
+}
+
+.header1 {
+    justify-content: space-around;
+    display: flex;
+}
+
+.header2 {
+    gap: 20px;
+    display: flex;
+}
+
+.header3 {
+    margin-left: 150px;
+    gap: 100px;
+    margin-top: 30px;
+    display: flex;
+}
+
+.header3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.header4 {
+    display: flex;
+}
+
+.search {
+    width: 50px;
+    height: 50px;
+}
+
+.shopping {
+    width: 50px;
+    height: 50px;
+}
+
+.settings {
+    width: 50px;
+    height: 50px;
+}
+
+.spill {
+    position: relative;
+    border-radius: 16px;
+    position: relative;
+}
+
+.main {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 2225px;
+    height: 700px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(245, 242, 242);
+    justify-content: center;
+    display: flex;
+}
+
+.main2 {
+    height: 200px;
+    width: 550px;
+}
+
+.main3 {
+    display: flex;
+    gap: 25px;
+}
+
+.main5 {
+    margin-left: 500px;
+}
+
+.exploremore {
+    width: 180px;
+    height: 55px;
+    margin-top: 300px;
+    border: 0;
+    background-color: blue;
+    border-radius: 30px;
+    color: white;
+}
+
+.coffeebeans {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 200px;
+    height: 700px;
+}
+
+.mainarticle1 h2 {
+    padding-top: 200px;
+    text-align: center;
+    color: rgb(235, 214, 157);
+}
+
+.mainarticle2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.brandImg {
+    gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.brandImg img {
+    width: 250px;
+    height: 250px;
+}
+
+.brandImg1 {
+    font-size: 10px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 16px;
+}
+
+.brandImg1 img {
+    position: relative;
+}
+
+.brandImg1 h2 {
+    position: absolute;
+    top: 1375px;
+}
+
+.brandImg2 {
+    font-size: 10px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 16px;
+}
+
+.brandImg2 img {
+    position: relative;
+}
+
+.brandImg2 h2 {
+    position: absolute;
+    top: 1375px;
+}
+
+.brandImg3 {
+    font-size: 10px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 16px;
+}
+
+.brandImg3 img {
+    position: relative;
+}
+
+.brandImg3 h2 {
+    position: absolute;
+    top: 1375px;
+}
+
+.brandImg4 {
+    font-size: 10px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 16px;
+}
+
+.brandImg4 img {
+    position: relative;
+}
+
+.brandImg4 h2 {
+    position: absolute;
+    top: 1375px;
+}
+
+.box1 {
+    gap: 20px;
+    display: flex;
+}
+
+.box1 h1 {
+    color: rgb(235, 214, 157);
+    font-size: 16px;
+}
+
+.box2 {
+    display: flex;
+}
+
+.box2 h1 {
+    color: rgb(235, 214, 157);
+    font-size: 16px;
+}
+
+.box3 {
+    display: flex;
+}
+
+.box3 h1 {
+    color: rgb(235, 214, 157);
+    font-size: 16px;
+}
+
+.box4 {
+    display: flex;
+}
+
+.box4 h1 {
+    color: rgb(235, 214, 157);
+    font-size: 16px;
+}
