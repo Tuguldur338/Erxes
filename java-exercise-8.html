@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number function 1</title>
+</head>
+<body>
+    <script>
+        function number_Function_One(a, b, c, d) {
+            let big = 0;
+            let equal = 0;
+            let small = 1;
+            if (a > 0) {
+                big = big + a;
+            } else if (a === 0) {
+                equal += 1;
+            } else {
+                small = small * a;
+            }
+            if (b > 0) {
+                big = big + b;
+            } else if (b === 0) {
+                equal += 1;
+            } else {
+                small = small * b;
+            }
+            if (c > 0) {
+                big = big + c;
+            } else if (c === 0) {
+                equal += 1;
+            } else {
+                small = small * c;
+            }
+            if (d > 0) {
+                big = big + d;
+            } else if (d === 0) {
+                equal += 1;
+            } else {
+                small = small * d;
+            }
+            console.log(big, equal, small)
+        }
+        number_Function_One(-1, -2, 3, 0)
+    </script>
+</body>
+</html>

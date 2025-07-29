@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Exercise-8 second part
+        let config = {
+            host: "Michelle",
+            port: "Univision",
+            protocol: "Immediate"
+        }
+        Object.seal(config);
+        console.log(config);
+        config.host = "Tuguldur";
+        config.port = "Erxes-Mongolia";
+        console.log(config) // seal doesn't prevent changing the values
+        delete config.host;
+        delete config.port;
+        console.log("Exercise-8", config); // seal prevents values from being deleted, but if you use round barricade " delete config(host) "it is deleted, but when you write " delete config.host " it is not deleted
+
+        // Exercise-9
+        let user = {
+            name: "Tuguldur",
+            age: 15,
+            gender: "Male"
+        }
+        function getKeysAndValues() {
+            return Object.entries(user)
+        }
+        console.log(getKeysAndValues())
+
+        // Exercise-10
+        const students = {
+            1: { name: "Bolor", grade: 95 },
+            2: { name: "Anu", grade: 87 },
+            3: { name: "Temuujin", grade: 78 },
+            4: { name: "Delger", grade: 83 },
+            5: { name: "Zolzaya", grade: 92 }
+        }
+
+        function calculateAverage() {
+            let average = (students[1].grade + students[2].grade + students[3].grade + students[4].grade + students[5].grade) / 5;
+            return average
+        }
+        console.log("Exercise-10 part-1", calculateAverage())
+
+        function findAboveAverageStudent(average) {
+            let aboveAverage = 0;
+            let equalToAverage = 0;
+            let belowAverage = 0;
+            if (students[1].grade > average) {
+                aboveAverage += 1;
+            } else if (students[1].grade === average) {
+                equalToAverage += 1;
+            } else {
+                belowAverage += 1;
+            }
+
+            if (students[2].grade > average) {
+                aboveAverage += 1;
+            } else if (students[2].grade === average) {
+                equalToAverage += 1;
+            } else {
+                belowAverage += 1;
+            }
+
+            if (students[3].grade > average) {
+                aboveAverage += 1;
+            } else if (students[3].grade === average) {
+                equalToAverage += 1;
+            } else {
+                belowAverage += 1;
+            }
+
+            if (students[4].grade > average) {
+                aboveAverage += 1;
+            } else if (students[4].grade === average) {
+                equalToAverage += 1;
+            } else {
+                belowAverage += 1;
+            }
+
+            if (students[5].grade > average) {
+                aboveAverage += 1;
+            } else if (students[5].grade === average) {
+                equalToAverage += 1;
+            } else {
+                belowAverage += 1;
+            }
+            return aboveAverage
+        }
+        console.log(findAboveAverageStudent(calculateAverage(average)))
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+<body>
+    <script>
+        //Exercise-1
+        let car = new Object();
+        car.brand = "Hyundai";
+        car.model = "Sonata_8";
+        car.year = 2020;
+        console.log("Exercise-1", car["brand"]) // car brand
+        console.log("Exercise-1", car["model"]) // car model
+        console.log("Exercise-1", car["year"]) // car year
+
+        // Exercise-2
+        let person = new Object();
+        person.firstName = "Tuguldur";
+        person.lastName = "Batbayar";
+        person.age = 15;
+   
+        delete person.age;
+        person.city = "city: Ulaanbaatar";
+        person.position = "Position: Student";
+        person.isMarried = "Is married: Not married";
+        console.log("Exercise-2", "person", person)
+
+        // Exercise-3
+        const getFullName = function(firstName, lastName) {
+            return firstName + " " + lastName
+        }
+        console.log("Exercise-3:", getFullName("Tuguldur", "Batbayar"))
+
+        // Exercise-4
+        let movie = new Object();
+        movie.title = "Killers diary";
+        movie.director = "Mc Gregor";
+        movie.year = "2024";
+        function getKeysAndValues() {
+            return Object.entries(movie)
+        }
+        console.log("Exercise-4", getKeysAndValues())
+
+        // Exercise-5
+        let address = new Object();
+        address.street = "Selbe";
+        address.city = "Ulaanbaatar";
+        address.zipCode = 22130;
+
+        let student = {
+            name: "Tuguldur",
+            age: 15,
+            address,
+            getFullAddress: function() {
+                return `Student name ${this.name} Student age ${this.age} Street ${this.address.street} City ${this.address.city} Zip code ${this.address.zipCode}`
+            }
+        }
+        console.log("Exercise-5", student.getFullAddress())
+
+        // Exercise-6
+        let user = {
+            name: "Tuguldur",
+            age: 10,
+            greet: function() {
+                return `Hello my name is ${this.name} and i am ${this.age} years old`
+            }
+        }
+        console.log("Exercise-6", user.greet())
+        user.age = 15;
+        console.log("Exercise-6", user.greet())
+
+        // Exercise-7
+        let book1 = {
+            title: "Thor",
+            author: "Smith, Wayne",
+            year: 2015
+        }
+
+        let book2 = {
+            author: "J.K. Rowling",
+            description: "A young wizard",
+            category: "Urban fantasy",
+            year: 1997,
+        }
+        function mergeBooks() {
+            return Object.assign(book1, book2)
+        }
+        console.log("Exercise-7", mergeBooks())
+
+        // Exercise-8
+        let config = {
+            host: "Michelle",
+            port: "Erxes-Mongolia",
+            protocol: "Immediate"
+        }
+        Object.freeze(config)
+        console.log(config)
+        config.host = "Tuguldur";
+        config.port = "Univision";
+        console.log(config) // freeze makes it so that you can't change anything inside it
+        delete config.host
+        console.log("Exercise-8", config.host) // but freeze doesn't prevent deleting so it is nochange proof but not nodelete proof
+    </script>
+</body>
+</html>
