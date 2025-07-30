@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Exercise-1
+        let numbers = [1, 2, 3, 4, 5];
+        console.log(numbers[2])
+
+        // Exercise-2
+        const animals = ["Lion", "Tiger", "Elephant", "Giraffe"];
+        console.log(animals)
+        animals[1] = "Panda";
+        console.log(animals)
+
+        // Exercise-3
+        const books = ["1984", "brave New World", "Fahrenheit 451"];
+        console.log(books)
+        books.push("Thor", "Harry Potter")
+        console.log(books)
+
+        // Exercise-4
+        const numbers1 = [10, 20, 30, 40, 50];
+        console.log(numbers1.indexOf(30))
+
+        // Exercise-5
+        const fruits1 = [
+            ["Banana", "Grape", "Mango"],
+            ["Peach", "Apple", "Dragon fruit"]
+        ];
+        const fruits2 = [
+            ["Strawberry", "Blueberry", "Kiwi"],
+            ["Green Apple", "Sugar apple", "Pineapple"]
+        ];
+        const allFruits = fruits1.concat(fruits2);
+        console.log(allFruits)
+
+        // Exercise-6
+        const colors = ["Red", "Green", "Blue", "Yellow", "Purple"];
+        console.log("Exercise-6", colors.includes("Violin"))
+        console.log(colors.includes("Red"))
+        console.log(colors.includes("Green"))
+        console.log(colors.includes("Magenta"))
+        console.log(colors.includes("Purple"))
+        console.log(colors.includes("Yellow"))
+        console.log(colors.includes("Orange"))
+
+        // Exercise-7
+        const array1 = ["a", "b", "c"];
+        const array2 = ["a", "b", "c"];
+        let array3 = array1.find(ifLengthIsEqual)
+        function ifLengthIsEqual() {
+            return array1.length === array2.length
+        }
+        console.log("Exercise-7", ifLengthIsEqual())
+
+        // Exercise-8
+        const words = ["Javascript", "is", "a", "versatile", "language"];
+        console.log("Exercise-8", words.join(" "))
+
+        // Exercise-1
+        const students = [
+            { name: "Anu", grade: 85 },
+            { name: "Bold", grade: 92 },
+            { name: "Tuvshin", grade: 78 },
+            { name: "Naraa", grade: 88 },
+            { name: "Solongo", grade: 95 }
+        ];
+
+        const topStudents = [];
+
+        students.forEach(function(student) {
+            if (student.grade > 90) return topStudents.push(student)
+        });
+        console.log("Exercise-1 part-1", topStudents)
+
+        // Exercise-1 part-2
+        console.log("Exercise-1 part-2", students.sort((x, y) => y.grade - x.grade));
+
+        // Exercise-1 part-3
+        let highestGrade = 0;
+
+        students.forEach(student =>{if(student.grade > highestGrade) {highestGrade = student.grade}});
+
+        console.log("Exercise-1 part-3", highestGrade);
+        let highestStudent = students.find(student => student.grade == highestGrade);
+        console.log("Exercise-1 part-3", highestStudent);
+
+        // Exercise-2 part-1
+        const products = [
+            { id: 1, name: "Laptop", price: 2500 },
+            { id: 2, name: "Mouse", price: 25 },
+            { id: 3, name: "Monitor", price: 400 },
+            { id: 4, name: "Keyboard", price: 100 },
+            { id: 5, name: "Phone", price: 1200 }
+        ];
+        const lowerPrice = [];
+        products.forEach(function(cheapProductNames) {
+            if (cheapProductNames.price < 500) {
+                return lowerPrice.push("Cheap products", cheapProductNames)
+            }
+        });
+        console.log("Exercise-2 part-1", lowerPrice)
+
+        // Exercise-2 part-2
+        console.log("Exercise-2 part-2", products.sort((x,y) => x.price - y.price))
+
+        // Exercise-2 part-3
+        let highestPrice = 0;
+
+        products.forEach(product => {
+            if (product.price > highestPrice) {
+                highestPrice = product.price
+            }
+        });
+        console.log("Exercise-2 part-3", highestPrice)
+
+        // Exercise-4 part-1
+        const products1 = [
+            { id: 101, name: "Laptop", prices: [2000, 2100, 1900] },
+            { id: 102, name: "Mouse", prices: [25, 27, 24] },
+            { id: 103, name: "Keyboard", prices: [100, 110, 90] },
+            { id: 104, name: "Laptop", prices: [1950, 1980, 2000] },
+            { id: 105, name: "Monitor", prices: [400, 390, 410] }
+        ];
+        let averagePrice = 0;
+        products1.forEach(function(product1) {
+            averagePrice = (product1.prices[0] + product1.prices[1] + product1.prices[2]) / 3;
+            return products1.push(averagePrice)
+        });
+        console.log("Exercise-4 part-1", products1)
+    </script>
+</body>
+</html>
