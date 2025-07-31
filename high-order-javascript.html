@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High order javascript</title>
+</head>
+<body>
+    <script>
+        // Exercise-1 part-1
+        const users = [
+
+            { id: 1, name: "Tsetsegee" },
+
+            { id: 2, name: "Dulmaa" },
+
+            { id: 3, name: "Bataa" },
+
+        ];
+
+        const orders = [
+
+            { userId: 1, items: [{ name: "MacBook", price: 2500000 }, { name: "Mouse", price: 40000 }] },
+
+            { userId: 2, items: [{ name: "Pen", price: 2000 }] },
+
+            { userId: 3, items: [{ name: "Chair", price: 120000 }] },
+
+        ];
+        const higherThanOneHundred = orders.filter((order) => 
+            order.items.some((item) => item.price > 100000)
+        );
+        console.log(higherThanOneHundred);
+
+        // Exercise-1 part-2
+        const filteredOrders = orders.filter((order) => 
+            order.items.some((item) => item.price > 100000)
+        );
+        console.log("Filtered orders", filteredOrders)
+
+        // Exercise-2
+        const students = [
+
+            { id: 1, name: "William", selectedSubjects: ["Math", "Physics"] },
+
+            { id: 2, name: "Drake", selectedSubjects: ["Biology", "Chemistry"] },
+
+            { id: 3, name: "Weekend", selectedSubjects: ["Math", "History"] },
+
+        ];
+
+        const subjects = [
+
+            { name: "Math" },
+
+            { name: "Physics"},
+
+            { name: "Chemistry" },
+
+            { name: "Biology"},
+
+            { name: "History" },
+
+        ];
+
+        const pickedMath = students.filter((student) => 
+            student.selectedSubjects.includes("Math")
+        );
+        console.log("Picked Math", pickedMath.find(name => pickedMath.name))
+    </script>
+</body>
+</html>
