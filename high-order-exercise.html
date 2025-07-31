@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // H.W part-1
+        const users = [
+            { id: 1, name: 'Zorigoo', vip: true },
+            { id: 2, name: 'Ariuka', vip: false },
+            { id: 3, name: 'Ugudei', vip: true },
+            { id: 4, name: 'Tuguldur', vip: false },
+        ];
+
+        const orders = [
+            { userId: 1, items: ['Phone', 'Laptop'], total: 120000 },
+            { userId: 2, items: ['Book'], total: 20000 },
+            { userId: 3, items: ['Fridge', 'TV'], total: 300000 },
+            { userId: 4, items: ['Mouse'], total: 15000 },
+            { userId: 1, items: ['Tablet'], total: 80000 },
+            { userId: 3, items: ['Camera'], total: 100000 },
+        ];
+        let trueVip = users.filter(user => user.vip === true);
+        trueVip.forEach(user => {
+            console.log(user.name, "VIP user")
+        });
+
+        // H.W part-2
+        let average = 0;
+        for (let i = 0; i < orders.length; i++) {
+            average += orders[i].total;
+        }
+        average = average / orders.length;
+        console.log(average)
+        let higherThanAverage = orders.filter((order) => order.total >= average);
+        console.log(higherThanAverage)
+
+        // H.W part-3
+        let ifInclude = orders.filter((filteredOrder) => filteredOrder.items.includes("Camera"));
+        let userId = users.filter(idUser => 
+            ifInclude.some(order => order.userId === idUser.id)
+        );
+
+        console.log(userId.map(userName => userName.name));
+
+
+        // 1. vip: true хэрэглэгч байх
+        // 2. Захиалгуудын дундаж дүн нь 100,000₮-аас их байх
+        // 3. Camera багцын аль нэг захиалгад орсон байх
+    </script>
+</body>
+</html>
