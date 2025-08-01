@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class DOM javascript</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        // Step-1
+        class Person {
+            constructor(name, age, gender) {
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+            }
+
+            greet() {
+               return `Hello, my name is ${this.name}. I am ${this.age} years old. And i am a ${this.gender} person.`;
+            }
+        }
+
+        // Step-2
+        class Student extends Person {
+            constructor(name, age, gender, studentId) {
+                super(name, age, gender);
+                this.studentId = studentId;
+            }
+
+            study() {
+                return `${this.name} is studying.`
+            }
+        }
+
+        // Testing
+        const person = new Person("Alice", 30, "Female");
+        person.greet();
+
+        const student = new Student("Tuguldur", 15, "Male", "S12345")
+        student.greet();
+        student.study();
+
+        // Appear in html
+        const information = document.getElementById("demo");
+
+        information.innerHTML = person.greet();
+
+        const studentInfo = document.getElementById("demo1");
+        studentInfo.innerHTML = student.study();
+
+        const studentGreet = document.getElementById("demo2");
+        studentGreet.innerHTML = student.greet();
+    </script>
+</body>
+</html>

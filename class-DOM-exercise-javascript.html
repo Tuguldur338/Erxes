@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-2</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        // Exercise-2 part-1
+        class Item {
+            constructor(name, price, quantity) {
+                this.name = name;
+                this.price = price;
+                this.quantity = quantity;
+            }
+
+            getTotalPrice() {
+                return `your total price comes to: ${this.price * this.quantity} dollars!`
+            }
+        }
+
+        // Testing
+        const totalPrice = new Item("Camera", 900, 5);
+        totalPrice.getTotalPrice();
+
+        // Appear in html
+        const yourTotalPrice = document.getElementById("demo");
+        yourTotalPrice.innerHTML = totalPrice.getTotalPrice();
+
+        // Exercise-2 part-2
+        class Inventory extends Item {
+            constructor(item) {
+                this.items = [];
+            }
+
+            addItem() {
+                console.log(this.items.push(item));
+            }
+
+            removeItem() {
+                let index = this.items.indexOf(this.items.find(item => item.name === itemName));
+                    delete this.items[index];
+            }
+
+            getInventoryValue() {
+                let total = 0;
+                this.items.map(item => total += item.getTotalPrice());
+                return total;
+            }
+
+            printInventory() {
+                let printValues = "";
+                this.itemsforEach(item => printValues += Object.values(item).toString() + "<br>");
+                return printValues;
+            }
+        }
+
+        // Testing
+        const inventory = new Inventory();
+
+        const item1 = new Item('Laptop', 1200, 2);
+        const item2 = new Item('Mouse', 25, 10);
+        const item3 = new Item('Keyboard', 75, 5);
+        const item4 = new Item('name4', 4, 4);
+        const item5 = new Item('name5', 5, 5);
+
+        inventory.addItem(item1);
+        inventory.addItem(item2);
+        inventory.addItem(item3);
+    </script>
+</body>
+</html>
