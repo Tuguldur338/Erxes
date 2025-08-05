@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do list</title>
+    <link rel="stylesheet" href="To-do-list-2.css" />
+  </head>
+  <body>
+    <div>
+      <input type="text" id="todoInput" />
+      <button onclick="handleAddButton()" id="handleAddingButton">
+        Add task to list
+      </button>
+    </div>
+    <div class="todoListsContainer">
+      <!-- ened todolists bn -->
+    </div>
+  </body>
+  <script>
+    class TodoList {
+      constructor(todoValue, isDone) {
+        this.todoValue = todoValue;
+        this.isDone = isDone;
+      }
+    }
+
+    class TodoLists extends TodoList {
+      constructor(todoValue, isDone) {
+        super(todoValue, isDone);
+        this.todoLists = new Array();
+      }
+
+      addTodoList(todoList) {
+        this.todoLists.push(todoList);
+      }
+
+      removeItem(index) {
+        this.todoLists.splice(index, 1);
+      }
+
+      getTodoLists() {
+        return this.todoLists;
+      }
+    }
+
+    const todoLists = new TodoLists();
+
+    function handleAddButton() {
+      const value = document.getElementById("todoInput").value;
+
+      if (!value) {
+        alert("Fill to do list input!");
+        return;
+      }
+
+      const newTodoList = new TodoList(value, false);
+      todoLists.addTodoList(newTodoList);
+      updateDisplay();
+    }
+
+    function updateDisplay() {
+      const todoListsContainer = document.querySelector(".todoListsContainer");
+
+      todoListsContainer.innerHTML = "";
+
+      todoLists.getTodoLists().map((list, index) => {
+        const row = document.createElement("div");
+
+        row.innerHTML = list.todoValue;
+
+        todoListsContainer.appendChild(row);
+      });
+    }
+  </script>
+</html>
