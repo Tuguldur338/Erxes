@@ -1,0 +1,78 @@
+#box {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 125px);
+  grid-template-rows: repeat(5, 100px);
+}
+
+#output {
+  border-radius: 8px;
+  margin: 0 25px 0 0;
+  font-weight: 10;
+  font-family: Oswald, sans-serif;
+  font-size: 32px;
+  text-align: end;
+  border: 1px solid rgb(185, 184, 184);
+  grid-column-start: 1;
+  grid-column-end: 5;
+  font-weight: 500;
+  height: 75px;
+}
+
+.box1 {
+  border-radius: 8px;
+  background-color: rgb(235, 235, 235);
+  margin: 10px 25px 0 0;
+  text-align: center;
+  border: 1px solid rgb(185, 184, 184);
+}
+
+.box1 button h1,
+.box2 button h1,
+.box3 button h1,
+.box4 button h1 {
+  margin: 25px 0 0 0;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.box1:hover {
+  background-color: lightgrey;
+}
+
+.box2:hover {
+  background-color: rgb(255, 237, 71);
+}
+
+.box3:hover {
+  background-color: rgb(250, 108, 108);
+}
+
+.box4:hover {
+  background-color: rgb(108, 250, 108);
+}
+
+.box2 {
+  border-radius: 8px;
+  margin: 10px 25px 0 0;
+  text-align: center;
+  border: 1px solid rgb(185, 184, 184);
+  background-color: rgb(221, 187, 51);
+}
+
+.box3 {
+  border-radius: 8px;
+  margin: 10px 25px 0 0;
+  text-align: center;
+  border: 1px solid rgb(185, 184, 184);
+  background-color: red;
+}
+
+.box4 {
+  border-radius: 8px;
+  margin: 10px 25px 0 0;
+  text-align: center;
+  border: 1px solid rgb(185, 184, 184);
+  background-color: green;
+}
