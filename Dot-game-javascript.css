@@ -1,0 +1,33 @@
+body {
+  font-family: Oswald, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+}
+.box {
+  height: 50px;
+  border: 1px solid black;
+}
+.dot {
+  background-color: red;
+}
+
+.total-score {
+  display: flex;
+  margin: 0 0 700px 0;
+  font-weight: 100;
+}
+
+.total-score h1 {
+  font-weight: 400;
+}
+
+.total-score p {
+  font-size: 34px;
+  margin: 20px 0 0 50px;
+}
