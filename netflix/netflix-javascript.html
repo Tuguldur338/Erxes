@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link rel="stylesheet" href="netflix-javascript.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="main-header">
+      <div class="header-left">
+        <nav>
+          <a href="netflix.html">
+            <img
+              src="netflix-logo.png"
+              alt="netflix logo"
+              class="netflix-header-picture"
+            />
+          </a>
+        </nav>
+
+        <nav class="header-nav">
+          <a href="home.html" class="header-nav-a">home</a>
+
+          <a href="series.html" class="header-nav-a">series</a>
+
+          <a href="movie.html" class="header-nav-a">movie</a>
+
+          <a href="game.html" class="header-nav-a">game</a>
+
+          <a href="latest-content.html" class="header-nav-a">Latest content</a>
+
+          <a href="my-wishlist.html" class="header-nav-a">My wishlist</a>
+
+          <a href="browse-by-language" class="header-nav-a"
+            >Browse by language</a
+          >
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <img
+          src="search-button.png"
+          alt="search button png"
+          class="header-search-button"
+        />
+
+        <div class="header-search-input">
+          <input type="text" placeholder="search" />
+        </div>
+
+        <nav class="header-two-nav">
+          <a href="kids.html" class="header-nav-two-a">kids</a>
+        </nav>
+
+        <img src="bell-logo.png" alt="bell logo png" class="header-bell-logo" />
+
+        <img
+          src="profile-picture-netflix.jpg"
+          alt="profile picture jpg"
+          class="netflix-profile-picture"
+        />
+
+        <button class="pop-menu">▽</button>
+      </div>
+    </header>
+
+    <!-- Movie trailer container -->
+    <div class="main-content">
+      <div class="main-content-left">
+        <iframe
+          width="2300"
+          height="500"
+          src="https://www.youtube.com/embed/5lMRfLJGXSM?playlist=5lMRfLJGXSM&si=Pr69ox3Zm8Ui2Lya&autoplay=1&mute=1&controls=0&loop=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; loop;"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          class="youtube-iframe"
+        ></iframe>
+
+        <nav>
+          <a href="https://www.netflix.com/mn/title/60027393"
+            ><button class="button-reproduction">reproduction</button></a
+          >
+        </nav>
+      </div>
+
+      <div class="main-content-middle">
+        <div class="main-content-middle-title">
+          <p class="movie-type">1986</p>
+          <p class="movie-type">Movie</p>
+          <p class="resolution-type">4K</p>
+          <img
+            src="comment-section-icon.png"
+            alt="comment section"
+            class="main-content-middle-img"
+          />
+        </div>
+
+        <p class="age-consent">8+</p>
+      </div>
+
+      <div class="main-content-right">
+        <h1>
+          Young orphan Sheeta and her kidnapper, Col. Muska, are flying to a
+          military prison when their plane is attacked by a gang of air pirates
+          led by the matronly Dola. Escaping from a mid-air collision via a
+          magic crystal around her neck, Sheeta meets fellow orphan Pazu and the
+          pair join forces to discover the mystical floating city of Laputa
+          while pursued by both Muska and the pirates, who lust for the city's
+          myriad treasures.
+        </h1>
+
+        <div>
+          <p>Starring: Isao Takahata</p>
+          <p>Genre: Animation, Fantasy, Comedy, Family film</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie container -->
+    <div class="main-movie-category-container">
+      <h1 class="main-movie-category">Japanese popular anime's</h1>
+
+      <div class="main-movie-content">
+        <button class="scroll-button left-button">&#10094;</button>
+
+        <div class="movie-scroll-wrapper">
+          <div class="container"></div>
+        </div>
+
+        <button class="scroll-button right-button">&#10095;</button>
+      </div>
+    </div>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <p>© 2023 Netflix, Inc.</p>
+          <p>All rights reserved.</p>
+        </div>
+
+        <div class="footer-right">
+          <a
+            href="https://www.netflix.com/mn/browse/genre/839338"
+            class="footer-link"
+            >Terms of Use</a
+          >
+          <a
+            href="https://www.netflix.com/mn/browse/genre/839338"
+            class="footer-link"
+            >Privacy</a
+          >
+          <a
+            href="https://www.netflixs.com/mn/browse/genre/839338"
+            class="footer-link"
+            >Cookie Preferences</a
+          >
+          <a
+            href="https://www.netflix.com/mn/browse/genre/839338"
+            class="footer-link"
+            >Corporate Information</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const container = document.querySelector(".container");
+
+      const scrollWrapper = document.querySelector(".movie-scroll-wrapper");
+
+      const leftButton = document.querySelector(".left-button");
+
+      const rightButton = document.querySelector(".right-button");
+
+      // Add this to your existing script to make the movie container stay fixed when clicked
+      const movieContainers = document.querySelectorAll(".movieContainer");
+
+      movieContainers.forEach((container) => {
+        container.addEventListener("click", () => {
+          container.classList.toggle("fixed");
+        });
+      });
+
+      // Scroll amount in pixels
+      const scrollAmount = 2255;
+
+      leftButton.addEventListener("click", () => {
+        scrollWrapper.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      });
+
+      rightButton.addEventListener("click", () => {
+        scrollWrapper.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
+
+      // Fetch movies from the Ghibli API
+      function getMovies() {
+        fetch(`https://ghibliapi.vercel.app/films`)
+          .then((res) => {
+            if (!res.ok) throw new Error("Movies not found, api wrong");
+            return res.json();
+          })
+          .then((data) => {
+            console.log(data);
+            const movies = data;
+            movies.map((movie) => {
+              const list = document.createElement("div");
+              list.classList.add("movieContainer");
+
+              list.innerHTML = `
+              <img src="${movie.image}" alt="${movie.title}"/>
+              <h2>${movie.title}</h2>
+            `;
+
+              container.appendChild(list);
+            });
+          });
+      }
+
+      getMovies();
+    </script>
+  </body>
+</html>
